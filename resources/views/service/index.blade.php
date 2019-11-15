@@ -3,7 +3,14 @@
 @section('title', 'services');
 
 @section('content')
-    <h1>Wecome to services </h1>
+    <h1>Welcome to services </h1>
+    
+    <form action="">
+    <input type="text" name="name" autocomplete="off" /> 
+    <button type="submit">Add Service</button>
+    </form>
+    
+    
     <ul>
     @forelse($services as $service)
     <li>{{ $service->name }}</li>
