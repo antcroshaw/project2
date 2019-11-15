@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/about', 'HelloController@about');
-Route::get('/services','ServiceController@index' );
+Route::post('/service', 'ServiceController@store');
+Route::get('/service','ServiceController@index' );
 

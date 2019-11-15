@@ -4,13 +4,20 @@
 
 @section('content')
     <h1>Welcome to services </h1>
-    
-    <form action="">
-    <input type="text" name="name" autocomplete="off" /> 
+
+    <form action="/service" method="post" >
+        @csrf
+    <input type="text" name="name" autocomplete="off" />
     <button type="submit">Add Service</button>
+
+
     </form>
-    
-    
+
+    <p style="color:red" >@error('name')  {{ $message }} @enderror</p>
+
+
+
+
     <ul>
     @forelse($services as $service)
     <li>{{ $service->name }}</li>
