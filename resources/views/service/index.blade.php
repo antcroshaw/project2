@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'services');
+@section('title', 'services')
 
 @section('content')
     <h1>Welcome to services </h1>
